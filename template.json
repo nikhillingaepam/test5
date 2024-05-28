@@ -1,0 +1,33 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Parameters": {
+        "SecretValue": {
+            "Type": "String",
+            "Description": "Enter the secrets to be stored"
+        },
+        "Owner": {
+            "Type": "String",
+            "Description": "Please provide the owner name"
+        }
+    },
+    "Resources": {
+        "Secretmanager": {
+            "Type": "AWS::SecretsManager::Secret",
+            "Properties": {
+                "Description": "Secret for DB",
+                "Name": "",
+                "SecretString": {
+                    "Ref": "SecretValue"
+                },
+                "Tags": [
+                    {
+                        "Key": "Owner",
+                        "Value": {
+                            "Ref": "Owner"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

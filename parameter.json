@@ -1,0 +1,10 @@
+[
+    {
+        "ParameterKey": "SecretValue",
+        "ParameterValue": "{\"db_name\": \"test-db\",\"db_user\": \"test-user\",\"db_user_pwd\": \"test\"}"
+    },
+    {
+        "ParameterKey": "Owner",
+        "ParameterValue": "test"
+    }    
+]
